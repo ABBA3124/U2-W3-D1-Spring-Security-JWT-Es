@@ -25,5 +25,14 @@ public class Dipendente {
     private String nome;
     private String cognome;
     private String email;
+    private String password;
     private String avatar;
+
+    public Dipendente(String username, String nome, String cognome, String email, String password) {
+        this.username = username;
+        this.nome = nome;
+        this.cognome = cognome;
+        this.email = email;
+        this.password = password;
+    }
 }

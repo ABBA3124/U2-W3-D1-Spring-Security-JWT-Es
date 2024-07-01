@@ -39,4 +39,10 @@ public class GlobalExceptionsHendler {
         }
     }
 
+    @ExceptionHandler(UnauthorizedException.class)
+    @ResponseStatus(HttpStatus.UNAUTHORIZED)
+    public ErroriDTO handleUnauthorized(UnauthorizedException errore) {
+        return new ErroriDTO(errore.getMessage(), LocalDateTime.now());
+    }
+
 }

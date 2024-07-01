@@ -1,6 +1,7 @@
 package davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.services;
 
 import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.entities.Dipendente;
+import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.exceptions.UnauthorizedException;
 import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.payloads.DipendenteLoginDTO;
 import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.security.JWTTools;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,10 @@ public class AuthService {
     public String authDipendenteAndGenerateToken(DipendenteLoginDTO payload) {
         Dipendente dipendente = this.dipendenteService.findByEmail(payload.email());
 
-
-        return jwtTools.creaToken(dipendente);
+        if (dipendente.getPassword().equals(payload.password())) {
+            return jwtTools.creaToken(dipendente);
+        } else {
+            throw new UnauthorizedException("Credenziali non corrette!");
+        }
     }
 }

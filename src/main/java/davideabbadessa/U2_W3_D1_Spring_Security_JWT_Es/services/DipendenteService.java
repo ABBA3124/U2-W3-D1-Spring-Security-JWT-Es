@@ -39,6 +39,7 @@ public class DipendenteService {
         dipendente.setNome(dipendenteDTO.nome());
         dipendente.setCognome(dipendenteDTO.cognome());
         dipendente.setEmail(dipendenteDTO.email());
+        dipendente.setPassword(dipendenteDTO.password());
         dipendente.setAvatar("https://ui-avatars.com/api/?name=" + dipendente.getNome() + "+" + dipendente.getCognome());
         return dipendenteRepository.save(dipendente);
     }
