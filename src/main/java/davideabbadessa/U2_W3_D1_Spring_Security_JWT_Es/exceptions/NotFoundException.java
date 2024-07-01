@@ -9,5 +9,9 @@ public class NotFoundException extends RuntimeException {
         super("ID: --> " + id + " non trovato!");
     }
 
+    public NotFoundException(String messaggio) {
+        super(messaggio);
+    }
+
 
 }
