@@ -1,14 +1,17 @@
 package davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.controllers;
 
+import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.exceptions.BadRequestException;
+import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.payloads.DipendenteDTO;
 import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.payloads.DipendenteLoginDTO;
 import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.payloads.DipendenteLoginResponseDTO;
+import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.payloads.DipendenteResponseDTO;
 import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.services.AuthService;
 import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.services.DipendenteService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/auth")
@@ -26,5 +29,15 @@ public class AuthController {
         return new DipendenteLoginResponseDTO(authService.authDipendenteAndGenerateToken(payload));
     }
 
+
+    @PostMapping("/registrati")
+    @ResponseStatus(HttpStatus.CREATED)
+    public DipendenteResponseDTO createDipendente(@Validated @RequestBody DipendenteDTO body, BindingResult validationResult) {
+        if (validationResult.hasErrors()) {
+            System.out.println(validationResult.getAllErrors());
+            throw new BadRequestException(validationResult.getAllErrors());
+        }
+        return new DipendenteResponseDTO(this.dipendenteService.saveDipendente(body).getId());
+    }
 
 }

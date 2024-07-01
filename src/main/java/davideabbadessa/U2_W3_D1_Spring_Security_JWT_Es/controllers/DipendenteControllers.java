@@ -31,10 +31,6 @@ public class DipendenteControllers {
         return dipendenteService.getDipendenteById(id);
     }
 
-    @PostMapping
-    public Dipendente createDipendente(@Validated @RequestBody DipendenteDTO dipendenteDTO) {
-        return dipendenteService.saveDipendente(dipendenteDTO);
-    }
 
     @PutMapping("/{id}")
     public Dipendente updateDipendente(@PathVariable UUID id, @Validated @RequestBody DipendenteDTO dipendenteDTO) {
