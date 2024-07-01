@@ -2,6 +2,7 @@ package davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.security;
 
 
 import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.entities.Dipendente;
+import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.exceptions.UnauthorizedException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.beans.factory.annotation.Value;
@@ -23,6 +24,17 @@ public class JWTTools {
                 .subject(String.valueOf(dipendente.getId()))
                 .signWith(Keys.hmacShaKeyFor(secret.getBytes()))
                 .compact();
+    }
+
+
+    public void verifyToken(String token) {
+        try {
+            Jwts.parser().verifyWith(Keys.hmacShaKeyFor(secret.getBytes())).build().parse(token);
+
+        } catch (Exception ex) {
+            throw new UnauthorizedException("Problemi col token! Per favore effettua di nuovo il login!");
+
+        }
     }
 
 }
