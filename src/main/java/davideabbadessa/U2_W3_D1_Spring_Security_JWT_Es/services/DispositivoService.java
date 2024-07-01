@@ -1,15 +1,15 @@
-package davideabbadessa.U2_W3_D1.services;
+package davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.services;
 
 
-import davideabbadessa.U2_W3_D1.entities.Dipendente;
-import davideabbadessa.U2_W3_D1.entities.Dispositivi;
-import davideabbadessa.U2_W3_D1.enums.StatoDispositivo;
-import davideabbadessa.U2_W3_D1.enums.TipoDispositivo;
-import davideabbadessa.U2_W3_D1.exceptions.BadRequestException;
-import davideabbadessa.U2_W3_D1.exceptions.NotFoundException;
-import davideabbadessa.U2_W3_D1.payloads.DispositivoDTO;
-import davideabbadessa.U2_W3_D1.repositories.DipendenteRepository;
-import davideabbadessa.U2_W3_D1.repositories.DispositivoRepository;
+import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.entities.Dipendente;
+import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.entities.Dispositivi;
+import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.enums.StatoDispositivo;
+import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.enums.TipoDispositivo;
+import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.exceptions.BadRequestException;
+import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.exceptions.NotFoundException;
+import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.payloads.DispositivoDTO;
+import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.repositories.DipendenteRepository;
+import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.repositories.DispositivoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,9 +1,9 @@
-package davideabbadessa.U2_W3_D1.controllers;
+package davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.controllers;
 
 
-import davideabbadessa.U2_W3_D1.entities.Dipendente;
-import davideabbadessa.U2_W3_D1.payloads.DipendenteDTO;
-import davideabbadessa.U2_W3_D1.services.DipendenteService;
+import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.entities.Dipendente;
+import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.payloads.DipendenteDTO;
+import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.services.DipendenteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;

@@ -1,4 +1,4 @@
-package davideabbadessa.U2_W3_D1.config;
+package davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.config;
 
 
 import com.cloudinary.Cloudinary;

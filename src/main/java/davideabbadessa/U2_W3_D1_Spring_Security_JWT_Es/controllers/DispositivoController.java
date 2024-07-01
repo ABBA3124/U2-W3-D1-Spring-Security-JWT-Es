@@ -1,8 +1,8 @@
-package davideabbadessa.U2_W3_D1.controllers;
+package davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.controllers;
 
-import davideabbadessa.U2_W3_D1.entities.Dispositivi;
-import davideabbadessa.U2_W3_D1.payloads.DispositivoDTO;
-import davideabbadessa.U2_W3_D1.services.DispositivoService;
+import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.entities.Dispositivi;
+import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.payloads.DispositivoDTO;
+import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.services.DispositivoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;

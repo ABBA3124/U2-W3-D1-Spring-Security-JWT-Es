@@ -1,6 +1,6 @@
-package davideabbadessa.U2_W3_D1.repositories;
+package davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.repositories;
 
-import davideabbadessa.U2_W3_D1.entities.Dipendente;
+import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.entities.Dipendente;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,7 +1,7 @@
-package davideabbadessa.U2_W3_D1.exceptions;
+package davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.exceptions;
 
 
-import davideabbadessa.U2_W3_D1.payloads.ErroriDTO;
+import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.payloads.ErroriDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;

@@ -1,8 +1,8 @@
-package davideabbadessa.U2_W3_D1.entities;
+package davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.entities;
 
 
-import davideabbadessa.U2_W3_D1.enums.StatoDispositivo;
-import davideabbadessa.U2_W3_D1.enums.TipoDispositivo;
+import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.enums.StatoDispositivo;
+import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.enums.TipoDispositivo;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;

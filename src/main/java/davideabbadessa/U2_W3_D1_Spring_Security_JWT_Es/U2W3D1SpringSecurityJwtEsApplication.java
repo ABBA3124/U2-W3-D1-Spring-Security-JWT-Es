@@ -1,4 +1,4 @@
-package davideabbadessa.U2_W3_D1;
+package davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

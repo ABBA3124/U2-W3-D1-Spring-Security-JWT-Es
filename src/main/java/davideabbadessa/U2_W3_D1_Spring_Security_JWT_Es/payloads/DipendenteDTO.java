@@ -1,4 +1,4 @@
-package davideabbadessa.U2_W3_D1.payloads;
+package davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.payloads;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;

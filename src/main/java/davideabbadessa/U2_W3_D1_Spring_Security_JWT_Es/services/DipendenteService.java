@@ -1,12 +1,12 @@
-package davideabbadessa.U2_W3_D1.services;
+package davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.services;
 
 
 import com.cloudinary.Cloudinary;
 import com.cloudinary.utils.ObjectUtils;
-import davideabbadessa.U2_W3_D1.entities.Dipendente;
-import davideabbadessa.U2_W3_D1.exceptions.NotFoundException;
-import davideabbadessa.U2_W3_D1.payloads.DipendenteDTO;
-import davideabbadessa.U2_W3_D1.repositories.DipendenteRepository;
+import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.entities.Dipendente;
+import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.exceptions.NotFoundException;
+import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.payloads.DipendenteDTO;
+import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.repositories.DipendenteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;

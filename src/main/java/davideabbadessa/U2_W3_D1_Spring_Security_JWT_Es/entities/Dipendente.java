@@ -1,4 +1,4 @@
-package davideabbadessa.U2_W3_D1.entities;
+package davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.entities;
 
 
 import jakarta.persistence.Entity;

@@ -1,4 +1,4 @@
-package davideabbadessa.U2_W3_D1.exceptions;
+package davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.exceptions;
 
 
 import java.util.UUID;
