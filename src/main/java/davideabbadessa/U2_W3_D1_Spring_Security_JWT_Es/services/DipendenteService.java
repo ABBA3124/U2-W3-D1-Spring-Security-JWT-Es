@@ -4,6 +4,7 @@ package davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.services;
 import com.cloudinary.Cloudinary;
 import com.cloudinary.utils.ObjectUtils;
 import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.entities.Dipendente;
+import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.exceptions.BadRequestException;
 import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.exceptions.NotFoundException;
 import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.payloads.DipendenteDTO;
 import davideabbadessa.U2_W3_D1_Spring_Security_JWT_Es.repositories.DipendenteRepository;
@@ -34,14 +35,18 @@ public class DipendenteService {
     }
 
     public Dipendente saveDipendente(DipendenteDTO dipendenteDTO) {
-        Dipendente dipendente = new Dipendente();
-        dipendente.setUsername(dipendenteDTO.username());
-        dipendente.setNome(dipendenteDTO.nome());
-        dipendente.setCognome(dipendenteDTO.cognome());
-        dipendente.setEmail(dipendenteDTO.email());
-        dipendente.setPassword(dipendenteDTO.password());
-        dipendente.setAvatar("https://ui-avatars.com/api/?name=" + dipendente.getNome() + "+" + dipendente.getCognome());
-        return dipendenteRepository.save(dipendente);
+        if (dipendenteRepository.findByEmail(dipendenteDTO.email()).isEmpty()) {
+            Dipendente dipendente = new Dipendente();
+            dipendente.setUsername(dipendenteDTO.username());
+            dipendente.setNome(dipendenteDTO.nome());
+            dipendente.setCognome(dipendenteDTO.cognome());
+            dipendente.setEmail(dipendenteDTO.email());
+            dipendente.setPassword(dipendenteDTO.password());
+            dipendente.setAvatar("https://ui-avatars.com/api/?name=" + dipendente.getNome() + "+" + dipendente.getCognome());
+            return dipendenteRepository.save(dipendente);
+        } else {
+            throw new BadRequestException("email già in uso!");
+        }
     }
 
     public void deleteDipendente(UUID id) {
